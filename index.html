@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice 1 JavaScript/DOM</title>
+        <link rel="stylesheet" href="indexStyle.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="Title" onclick="changeColorTitle()">Practice 1 - Presentation Webpage</h1>
+            <h6 id="SubTitle" onclick="changeColorTitle()">Click here and watch the changes</h6>
+        </header>
+
+        <nav id="Nav">
+            <form>
+                <a href="./forms.html"><input id="botonForms" class="btn" type="button" value="Go to Formularies" style="width: 110px;"></a>
+                <input onclick="haha()" id="botonHidden" class="btn" type="button" value="Can you click me?" style="width: 110px;">
+                <input onclick="startBooks()" class="btn" type="button" value="Reading books" style="width: 100px;">
+                <input onclick="startLetter()" class="btn" type="button" value="Writting a letter" style="width: 100px;">
+                <input onclick="editTitle()" class="btn" type="button" value="Edit title">
+                <input onclick="editBody()" class="btn" type="button" value="Edit body">
+                <input onclick="editAuthor()" class="btn" type="button" value="Edit author">
+
+                <select id="Font">
+                    <option value="Courier New">Courier New (Font type)</option>
+                    <option value="Lucida Sans">Lucida Sans (Font type)</option>
+                    <option value="Times New Roman">Times New Roman (Font type)</option>
+                    <option value="Arial, Helvetica, sans-serif">Arial (Font type)</option>
+                    <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana (Font type)</option>
+                </select>
+
+                <select  id="Size">
+                    <option value="12">Dwarf (Font size)</option>
+                    <option value="16">Small (Font size)</option>
+                    <option value="22">Medium (Font size)</option>
+                    <option value="28">Large (Font size)</option>
+                    <option value="36">Extreme (Font size)</option>
+                    <option value="72">Are you crazy? (Font size)</option>
+                </select>
+
+                <select  id="Color">
+                    <option value="red">Red (Font color)</option>
+                    <option value="blue">Blue (Font color)</option>
+                    <option value="pink">Pink (Font color)</option>
+                    <option value="yellow">Yellow (Font color)</option>
+                    <option value="green">Green (Font color)</option>
+                    <option value="orange">Orange (Font color)</option>
+
+                </select>
+                
+                <select  id="Background">
+                    <option value="purple">Purple (Background color)</option>
+                    <option value="blue">Blue (Background color)</option>
+                    <option value="black">Black (Background color)</option>
+                    <option value="yellow">Yellow (Background color)</option>
+                    <option value="green">Green (Background color)</option>
+                    <option value="brown">Brown (Background color)</option>
+                    <option value="red">Red (Background color)</option>
+                    <option value="pink">Pink (Background color)</option>
+                </select>          
+
+                <input onclick="resetPage()" class="btn" type="button" value="Reset">
+            
+            </form>
+            
+        </nav>
+
+        <main>
+            <aside id="LeftAside">
+
+                <img onmouseenter="sizeBig()" onmouseleave="sizePic()" id="Image" src="./pictures/Quijote.jpg">
+                <div></div>
+                <input onclick="leftBook()" type="button" id="ButtonLeft" class="btnPic" value="<<<">
+                <input onclick="plusPic()" type="button" id="ButtonPlus" class="btnPic" value="+">
+                <input onclick="minusPic()" type="button" id="ButtonMinus" class="btnPic" value="-">
+                <input onclick="rightBook()" type="button" id="ButtonRight" class="btnPic" value=">>>">
+                <div></div>
+                <input onclick="backgroundPic()" type="button" id="ButtonBack" class="btnPic" value="Background" style="width: 298px; height: 30px; border: 1px solid darkgray; margin-left: 2px; margin-top: 5px;">
+                <div></div>
+                <input onclick="cleanBook()" type="button" id="ButtonClean" class="btnPic" value="Hide the text" style="width: 298px; height: 30px; border: 1px solid darkgray; margin-left: 2px; margin-top: 5px;">
+                <div></div>
+                <input onclick="showTitle()" type="button" id="ButtonTitle" class="btnPic" value="Title" style="width: 146px; margin-top: 5px;">
+                <input onclick="showSubtitle()" type="button" id="ButtonSubtitle" class="btnPic" value="Subtitle" style="width: 146px; margin-top: 5px;">
+                <div></div>
+                <input onclick="showText()" type="button" id="ButtonText" class="btnPic" value="Text" style="width: 146px; margin-top: 5px;">
+                <input onclick="showAuthor()" type="button" id="ButtonAuthor" class="btnPic" value="Author" style="width: 146px; margin-top: 5px;">
+                <div></div>
+                <input onclick="showAll()" type="button" id="ButtonBook" class="btnPic" value="Show the Book" style="width: 298px; height: 30px; border: 1px solid darkgray; margin-left: 2px; margin-top: 5px;">
+                <div></div>
+                <input onclick="clearBackground()" type="button" id="ButtonBackClean" class="btnPic" value="Clear the background" style="width: 298px; height: 30px; border: 1px solid darkgray; margin-left: 2px; margin-top: 5px;">
+                <div></div>
+
+            </aside>
+
+            <section id="Section">
+                
+                <article id="Books">
+                    <h2 onclick="font()" id="TitleSec">HELLO WORLD!</h2>
+                    <h3 onclick="normal()" id="SubtitleSec">Welcome to my page for work with the text</h3><br>
+                    <p onclick="underline()" id="P1Sec">To activate the left panel, you will need to activate the "Reading books" button.</p><br>
+                    <p onclick="rose()" id="P2Sec">On this page you can consult details about books, read a part, and learn more about these works.</p><br>
+                    <p onclick="bold()" id="P3Sec">To activate the right panel, you will have to activate the "Writting a letter" button.</p><br>
+                    <p onclick="green()" id="P4Sec">On this page you can enter your data to write an email.</p><br>
+                    <p onclick="overline()" id="P5Sec">With the navigation bar you can edit different parameters of the text.</p><br>
+                    <p onclick="blue()" id="P6Sec">Play with it and have fun, there is a lot to explore. (You can even try pressing where you don't see a button... something might happen.)</p><br>
+                    <p onclick="italic()" id="AuthorSec">Antonio Nicolás Salmerón Rubio {S3ll4rd0} (Villajoyosa, October 29, 1991)</p>
+                </article>
+
+                <article id="Letter">
+                    <img src="" id="Stamp" style="width: 120px; float: right;">
+                    <p id="ReceiverName"></p>
+                    <p id="ReceiverAddress"></p>
+                    <p id="ReceiverCountry"></p>
+                    <div style="float: clear;"><br><br></div>
+                    <p id="Date"></p>
+                    <p id="SenderName"></p>
+                    <p id="SenderAddress"></p>
+                    <p id="SenderCity"></p>
+                    <p id="SenderCountry"></p>
+                    <br>
+                    <p id="Greetings"></p>
+                    <br>
+                    <div id="LetterBody">
+                    </div>
+                    <br><br>
+                    <p id="Farewell"></p>
+                    <p id="Whishes"></p>
+                    <img id="Sign" style="width: 120px; float: right;">
+
+                </article>
+
+            </section>
+
+            <aside id="RightAside">
+
+                <label for="Addressee" class="label">ADDRESSEE:</label>
+                <div></div>
+
+                <label for="Name" class="label">- Name:</label>
+                <input type="text" id="NameReceiver" class="letter"/>
+                <label for="Surname" class="label">- Surname: </label>
+                <input type="text" id="SurnameReceiver" class="letter"/>
+                <label for="Address" class="label">- Address: </label>
+                <input type="text" id="AddressReceiver" class="letter"/>
+                <label for="City" class="label">- City: </label>
+                <input type="text" id="CityReceiver" class="letter"/>
+                <label for="Postal Code" class="label">- Postal Code: </label>
+                <input type="text" id="PostalCodeReceiver" class="letter"/>
+                <label for="Country" class="label">- Country: </label>
+                <input type="text" id="CountryReceiver" class="letter"/>
+
+                <div><br></div>
+                <label for="Sender" class="label">SENDER:</label>
+                <div></div>
+
+                <label for="Name" class="label">- Name:</label>
+                <input type="text" id="NameSender" class="letter"/>
+                <label for="Surname" class="label">- Surname: </label>
+                <input type="text" id="SurnameSender" class="letter"/>
+                <label for="Address" class="label">- Address: </label>
+                <input type="text" id="AddressSender" class="letter"/>
+                <label for="City" class="label">- City: </label>
+                <input type="text" id="CitySender" class="letter"/>
+                <label for="Postal Code" class="label">- Postal Code: </label>
+                <input type="text" id="PostalCodeSender" class="letter"/>
+                <label for="Country" class="label">- Country: </label>
+                <input type="text" id="CountrySender" class="letter"/>
+                <label for="Date" class="label">- Shipping date: </label>
+                <input type="date" id="DateSender" class="letter"/>
+
+                <div><br></div>
+                <label for="Message" class="label">MESSAGE:</label>
+                <textarea id="MessageBox" class="letter"></textarea>
+                <div><br></div>
+                <input onclick="writeLetter()" type="button" id="ButtonLetter" class="letter" value="Send the text">
+            </aside>
+        </main>
+
+        <footer>
+            IES Pere Maria. <strong>BENIDORM.</strong>  Antonio Nicolás Salmerón Rubio {S3ll4rd0} tonet.sellardo@gmail.com
+        </footer>
+
+        <script src="indexScript.js"></script>
+
+    </body>
+</html>
